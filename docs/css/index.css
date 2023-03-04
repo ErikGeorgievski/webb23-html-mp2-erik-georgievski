@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: #191919;
+}
+
+
+/*Root - backgroudn color*/
+
+:root{
+    --background:rgb(20, 20, 19)
+}
+
+
+
+
+
+header{
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.logo1{
+    width: 12vh;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: aliceblue;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content:'' ;
+    position: absolute;
+}
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+.nav-toggle-label span::after{
+    top:7px;
+}
+
+
+
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform:scale(1, 0) ;
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+nav ul{
+    margin: 0;
+    padding: 0 ;
+    list-style: none;
+}
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+
+}
+
+/* hover till nav*/
+nav a:hover{
+    color: crimson;
+}
+.nav-toggle:checked ~ nav {
+    transform:scale(1, 1) ;
+
+
+}
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+
+}
+
+/*hamburger menu nav*/
+@media screen and (min-width:800px){
+    .nav-toggle-label{
+        display: none;
+    }
+    
+    header{
+        display: grid;
+        grid-template-columns:1fr auto minmax(600px, 1fr) 1fr ;
+    }
+    .logo1{
+        grid-column: 2/ span 1;
+    }
+    nav{
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav li{
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: crimson;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0 ;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before{
+        transform: scale(1, 1);
+    }
+}
+
+.img001{
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+/* display:grid*/
+section{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #191919;
+    width: 1200px;
+    margin: auto;
+    padding-bottom: px;
+
+}
+marquee{
+    height: 300px;
+    width: 100%;
+    margin-top: 30px;
+    
+}
+@media screen and ( max-width:1200px){
+    section{
+        width: 100%;
+    }
+
+}
+.text-mar{
+    color: aliceblue;
+    font-size: 5vh;
+    font-family: cursive;
+}
+.img0101{
+    margin-left: 5vh;
+    box-shadow: 10px 10px 5px lightblue;
+}
+.google-maps{
+    width: 100%;
+    padding: 4vh;
+    border-radius: 20px;
+   
+}
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #ccc;
+}
+
+.box{
+    flex: 1 1 300px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.3 green, blue, alpha);
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+}
+.box .image{
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+
+}
+.box .image img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+
+}
+.box .info .tittle{
+    padding: 10px;
+    color: #666;
+    font-size: 20px;
+}
+
+.box .info .subinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-top: 1px solid #666;
+
+}
+
+.box .info .subinfo .price{
+    color: crimson;
+    font-size: 20px;
+
+}
+
+.box .info .subinfo .price span{
+    font-size: 15px;
+    color: #999;
+    text-decoration: line-through;
+}
+.box .info .subinfo .star{
+    color: orange;
+    font-size: 17px;
+
+}
+
+.box .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 223px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    transform: scale(0);
+    
+
+}
+.box:hover .overlay{
+    transform: scale(1)
+
+}
+.fas{
+    text-decoration: none;
+}
+
+.box .overlay a{
+    color: #666;
+    background: #fff;
+    margin: 10px;
+    padding: 13px 15px;
+    font-size: 25px;
+    transform: translateY(-150px);
+    transition-property:transform;
+    transition-delay: calc(50ms * var(--i));
+
+}
+.box:hover .overlay a{
+    transform: translateY(0px);
+}
+.box .overlay a:hover{
+    color: orange;
+}
+.fa-cutlery{
+    color: crimson;
+    margin-left: 15px;
+}
+.info>h3{
+    display: flex;
+    justify-content: center;
+}
+
+/*footer*/
+
+footer{
+    display: grid;
+    justify-content: end;
+    align-content: end;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding:50px 10px ;
+    background: #666;
+
+}
+footer .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr  ;
+    gap: 10px;
+    
+
+}
+
+footer .container .sec h2{
+    position: relative;
+    color: aliceblue;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+footer .container .sec h2::before{
+
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 130px;
+    height: 2px;
+    background: red;
+}
+footer .container .sec p{
+    color: aliceblue;
+
+}
+footer .container ul{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat();
+}
+
+
+footer .container ul li{
+    list-style: none;
+    margin-bottom: 3vh;
+}
+footer .container ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+
+footer .container ul li a:hover{
+    color: red;
+  
+}
+.copy{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+@media (max-width:990px){
+    footer{
+        padding: 40px;
+    }
+    footer .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+        
+    }
+    
+}

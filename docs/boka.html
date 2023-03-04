@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boka-bord</title>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" referrerpolicy="no-referrer" />
+
+   
+
+    <link rel="icon" type="image/png" sizes="favicon-16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="css/boka.css">
+
+   
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+    <meta name="description" content="Pizzeria ">
+    <meta name="keywords" content="pizza, sallad, kebbab, Trelleborg, pizzeria">
+    <meta name="author" content="Erik Georgievski">
+
+    <header>
+        <div class="logo">
+            <img src="img/logo1.png " class="logo1"  alt="logo">
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <nav >
+            <ul>
+                <li><a href="index.html">Olympic</a></li>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="#">Boka Bord</a></li>
+                <li><a href="personal.html">Personal</a></li>
+              
+            </ul>
+
+
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"> <span></span></label>
+
+
+    </header>
+
+    
+    <main class="row">
+
+        <div class="card-07">
+            <h2>Öppettider</h2>
+            <h4>Pizza med smak och kvalite hittar du hos oss på Pizzeria Olympic!</h4>
+            <h3 class="h3-1">Måndag - Torsdag</h3>
+            <h3 class="h3-2">14:00-22:00</h3>
+            <h3 class="h3-3">Fredag - Söndag</h3>
+            <h3 class="h3-4">13:00-22:00</h3>
+        
+
+           
+            
+        </div>
+
+
+        <div class="card-07">
+            <h2 class="rubrik2-1">Boka bord</h2>
+           <form  class="forms" action="" method="GET">
+              <div>
+                <label id="label1" for="name">Namn</label> <br>
+                <input type="text" name="namn" id="name" required> 
+                
+              </div>
+              <div>  
+                <label  id="label1" for="lastname">Efternamn</label> <br>
+                <input type="text" name="efternamn" id="lastname" required> 
+                
+              </div>
+              <div>
+                <label for="date">Datum</label> <br>
+                <input type="date" name="date"required>
+              </div>
+              <div>
+                <label for="clock">Tid</label> <br>
+                <input type="time">
+              </div>
+            
+              <div>
+                <label id="label1" for="number">Antal personer</label> <br>
+                <input type="number" name="antal" id="antal" min="1" max="15" required> 
+                
+              </div>
+
+              <div>
+                <label id="label1" for="email">Email</label> <br>
+                <input type="email" name="email" id="email" required> 
+                
+              </div>
+
+              <div>
+                <h4>Matallergi, intolerans eller frågor</h4>
+                <textarea name="Alergier" id="text1" cols="30" rows="5" placeholder="Frågor & alergier"></textarea>
+                
+                
+              </div>
+
+
+              <div>
+                <button  id="button1" type="submit">Skicka</button>
+              </div>
+
+              <div>
+                <button id="button1" type="reset">Reset</button>
+              </div>
+
+
+           </form>
+
+        </div>
+
+
+
+
+       
+
+
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>Om oss</h2>
+                <p>Välkomen in till oss på Pizzeria Olympic. Här serveras Kvalitetspizzor, Sallader, Hamburgare, Pastasallader, Kebab, Gyros, Kyckling & A La Carte. Vi erbjuder även glutenfri pizzabotten. (obs : 30cm) , våra rullar med hembakat bröd samt vårt pitabröd som vi bakar helt själv med så mycket mer gott. Vi använder oss av både nötkött och gyroskött.</p>
+            </div>
+    
+            <div class="sec kontakt">
+                <h2>Kontakta oss</h2>
+                <p>
+                    <ul>
+                        <li>  <a  class="tel:041010367" href="tel:041010367"><i class='fas fa-phone-alt' style='font-size:38px'></i>0410-10367</a>  </li>
+                        <li>  <a  class="tel:07067050502" href="tel:0767050502"><i class='fas fa-phone-alt' style='font-size:38px'></i>0767-050502</a>  </li>
+                        <li><a href="mailto:olympicpizzeria@outlook.com"><i class="fas fa-envelope" style="font-size: 38px; color: aliceblue; padding: 5px; border-radius: 10px;"></i>olympicpizzeria@outlook.com</a></li>
+                        
+                    </ul>
+                </p>
+                
+    
+            </div>
+            <div class="sec kontakt">
+                <h2>Följa oss</h2>
+                <p>
+                    <ul>
+                        <li>  <a  class="facebook" href="https://www.facebook.com/Olympicpizzeria" target="_blank"><i class='fab fa-facebook-f' style="font-size: 38px; color: aliceblue; background-color:blue; padding: 5px; border-radius: 10px; padding-left: 10px; padding-right: 10px;"></i>Pizzeria Olympic
+                        </a>  </li>
+                        <li>  <a  class="instagram" href="http://instagram.com" target="_blank"><i class='fab fa-instagram' style='font-size:38px;color:aliceblue; background-color:red; padding: 5px; border-radius: 10px;'></i>Pizzeria Olympic</a>  </li>
+                        
+                    </ul>
+                </p>
+                
+    
+            </div>
+            <div class="copy">
+                &#169; Copyright Pizzeria OLympic 2023
+            </div>
+        </div>
+    
+    </footer>
+    
+
+    
+
+
+
+
+
+
+    
+</body>
+</html>
